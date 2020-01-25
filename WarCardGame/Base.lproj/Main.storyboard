@@ -41,7 +41,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="DBo-Yu-PLs" userLabel="Cards Stack View">
                                         <rect key="frame" x="0.0" y="0.0" width="270" height="170"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card6" translatesAutoresizingMaskIntoConstraints="NO" id="4cq-Vo-1xa">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card4" translatesAutoresizingMaskIntoConstraints="NO" id="4cq-Vo-1xa">
                                                 <rect key="frame" x="0.0" y="0.0" width="120" height="170"/>
                                             </imageView>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card10" translatesAutoresizingMaskIntoConstraints="NO" id="w5w-Gv-pix">
@@ -52,6 +52,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cVf-A7-tkY" userLabel="Deal Button">
                                         <rect key="frame" x="94" y="200" width="82" height="31"/>
                                         <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gh5-uv-CEt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <variation key="heightClass=compact-widthClass=compact" spacing="20"/>
@@ -110,6 +113,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="cpuScoreLabel" destination="fk0-Lv-tHz" id="CgC-Tb-Zlm"/>
+                        <outlet property="leftImageView" destination="4cq-Vo-1xa" id="XMl-0Q-e1X"/>
+                        <outlet property="playerScoreLabel" destination="BnL-Mf-YE0" id="41p-3o-SCZ"/>
+                        <outlet property="rightImageView" destination="w5w-Gv-pix" id="t6L-Jt-vRz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,7 +128,7 @@
     <resources>
         <image name="background" width="414" height="896"/>
         <image name="card10" width="120" height="170"/>
-        <image name="card6" width="120" height="170"/>
+        <image name="card4" width="120" height="170"/>
         <image name="dealbutton" width="82" height="31"/>
         <image name="logo" width="122" height="67"/>
     </resources>
